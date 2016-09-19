@@ -1,0 +1,45 @@
+body{
+    font-family: "微软雅黑";
+}
+.newmedia {
+    color: #444;
+    height: 100px;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    height: 65px;
+}
+.newmedia:hover{
+    text-decoration: none;
+    color: #444;
+}
+.newmedia .media-object {
+    border: 1px #ddd solid;
+    width: 64px;
+    height: 64px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.newmedia h4.media-heading {
+    color: #2a2a2a;
+}
+.newmedia p{
+    color: #888;
+    font-size: 12px;
+    line-height: 1.2;
+}
+.pad-btm {
+    padding-bottom: 20px;
+}
+.padd-top {
+    padding: 40px 0;
+}
+.height200 {
+    height: 100px!important;
+}
+
+
+
+
+
