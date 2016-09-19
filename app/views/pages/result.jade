@@ -1,0 +1,40 @@
+extends ../layout
+block content
+	.container
+		.row
+			if movies && movies.length>0
+				.col-md-12
+					each item in movies
+						.col-md-6.pad-btm
+							a.media.newmedia(href="/movie/#{item._id}")
+								.media-left
+									if item.poster.indexOf('http')>-1
+										img.media-object(src="#{item.poster}",alt="#{item.title}")
+									else
+										img.media-object(src="/upload/#{item.poster}",alt="#{item.title}")
+								.media-body
+									h4.media-heading #{item.title}
+									//-p #{item.classtype}
+									p #{item.summary}
+					
+				ul.pagination
+					- for(var i=0;i<totalPage;i++){
+						- if(currentPage==(i+1)){
+							li.active
+								span #{currentPage}
+						- }else{
+							li
+								a(href="/result?catId=#{movies[0].category[0]}&p=#{i}") #{i+1}
+						- }
+					- }
+		//-each cat in categories
+			h3.col-md-12=keyword
+			if cat.movies && cat.movies.length>0
+				each item in cat.movies
+					.col-md-6.pad-btm
+						a.media.newmedia(href="/movie/#{item._id}")
+							.media-left
+								img.media-object(src="#{item.poster}",alt="#{item.title}")
+							.media-body
+								h4.media-heading #{item.title}
+								p #{item.summary}
