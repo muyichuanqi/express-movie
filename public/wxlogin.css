@@ -7,14 +7,6 @@
 .impowerBox .status.status_browser{
   position:relative;
 }
-.impowerBox .status.status_browser:before{
-  background:#fff;
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  content:"微信扫一扫，登录或者注册 36镇";
-  font-size:12px;
-  color:#666;
+.impowerBox .icon38_msg.succ{
+  display:none;
 }
